@@ -1,0 +1,40 @@
+.title {
+    text-transform: uppercase;
+    font-size: 250%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.title img {
+    max-width: 500px;
+    margin: -16px;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: rgba(255, 255, 255, 0);
+    background-image: linear-gradient(to bottom,
+    rgba(117, 117, 117, 0),
+     rgb(237, 255, 166));
+    background-size: cover;
+    background-position: center;*/
+}
+
+.divider {
+    margin: 10px;
+    width: 100%;
+    background-color: grey;
+}
+
+
+@media (max-width: 540px) {
+    .title img {
+        max-width: 98%;
+    }
+}

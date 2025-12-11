@@ -1,0 +1,60 @@
+.quizWrapper {
+    display: flex;
+    min-height: 40vh;  
+}
+
+.quizBox {
+    max-width: 800px;
+    min-width: 500px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    padding: 20px;
+    margin: 2% auto;
+}
+
+.quizBox a:not(.MuiButton-root) {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    flex: 0.8;
+    justify-content: space-evenly;
+}
+
+.selections > div {
+    margin-bottom: 30px 
+}
+
+.errorMessage, .warningMessage {
+    width: 100%;
+    padding: 10;
+    margin-bottom: 10px;
+    border-radius: 4;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.errorMessage {
+    color: white;
+    background-color: orangered;
+}
+
+.warningMessage {
+    color: black;
+    background-color: rgb(247, 247, 90);
+}
+
+/* .MuiTextField-root {
+    margin-bottom: 30px !important;
+}*/
+
+@media (max-width: 500px) {
+    .quizBox {
+        min-width: 90%;
+    }
+}

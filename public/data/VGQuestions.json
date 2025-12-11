@@ -1,0 +1,381 @@
+{
+    "questions": [
+    {
+        "question": "Would you rather spend more time playing or watching a narrative unfold?",
+        "options": ["dynamic"],
+        "optionStrings": ["Gameplay focus", "I want a strong mix of both!", "Story focus"],
+        "questionType": "narrative level",
+        "questionStyle": "add1Num",
+        "optional": true
+      }, 
+      {
+        "question": "Pick a style that sounds appealing to you.",
+        "options": ["dynamic"],
+        "questionType": "styles",
+        "questionStyle": "add1String",
+        "optional": false
+      },
+      {
+        "question": "Which variation of 2D/3D do you prefer?",
+        "options": ["dynamic"],
+        "optionStrings": ["UI/Menu Interaction", "Sidescrolling", "Hybrid (2.5, Isometric)", "3D Interactive"],
+        "questionType": "3D",
+        "questionStyle": "add1Num",
+        "optional": true
+      },
+      {
+        "question": "What level of challenge do you want in your game?",
+        "options": ["dynamic"],
+        "optionStrings":[ "Casual - Easy", "Medium - Adjustable Difficulty", "I want a serious challenge" ],
+        "questionType" : "difficulty",
+        "questionStyle": "add1Num",
+        "optional": false
+      },
+      {
+        "question": "Do you feel like abstract visuals or realism?",
+        "options": ["dynamic"],
+        "optionStrings": ["Hyperstylized / Abstract", "Mixed: Stylized realism", "Lifelike realism"],
+        "questionType": "realism",
+        "questionStyle": "add1Num",
+        "optional": true
+      },
+      {
+        "question": "Pick a second style you would like in the game.",
+        "options": ["dynamic-unique"],
+        "questionType": "styles",
+        "questionStyle": "add1String",
+        "optional": false
+      }
+    ],
+
+    "results": [
+      {
+        "name": "Death Stranding",
+        "id": "tt5807606",
+        "3D": 3,
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["exploration", "combat", "traversal", "item management", "shooter"],
+        "strengths": ["powerful music", "narrative depth", "cinematic", "amazing visuals", "technical mastery"],
+        "maturity": 2,
+        "realism": 2,
+        "note": "Both Death Stranding 1 and 2 are incredible"
+      },
+      {
+        "name": "Journey",
+        "id": "tt1821474",
+        "3D": 3,
+        "narrative level": 0,
+        "difficulty": 0,
+        "styles": ["exploration", "platformer", "traversal"],
+        "strengths": ["powerful music", "amazing visuals"],
+        "maturity": 2,
+        "realism": 1,
+        "note": "This is a short game at a few hours, but you'll remember the experience forever!"
+      },
+      {
+        "name": "Immortality",
+        "id": "tt21911886",
+        "3D": 0,
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["mystery solving"],
+        "strengths": ["cinematic", "amazing visuals", "narrative depth", "technical mastery"],
+        "maturity": 2,
+        "realism": 2,
+        "note": "This is an amazing live-action mystery game. Fun to play with friends, too!"
+      },
+      {
+        "name": "Elden Ring",
+        "id": "tt10562854",
+        "3D": 3,
+        "narrative level": 0,
+        "difficulty": 2,
+        "styles": ["exploration", "combat"],
+        "strengths": ["amazing visuals", "technical mastery"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Pentiment",
+        "id": "tt23725794",
+        "3D": 1,
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["mystery solving", "exploration", "puzzles", "adventure"],
+        "strengths": ["amazing visuals", "narrative depth", "powerful music"],
+        "maturity": 2,
+        "realism": 0
+      },
+      {
+        "name": "Danganronpa 2: Goodbye Despair",
+        "id": "tt6155214",
+        "3D": 2, 
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["mystery solving", "exploration", "puzzles"],
+        "strengths": ["narrative depth"],
+        "maturity": 2,
+        "realism": 0,
+        "note": "All the Danganronpas are good; this one's just my favorite!"
+      },
+      {
+        "name": "Hi-Fi Rush",
+        "id": "tt26453303",
+        "3D": 3, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "rhythm game"],
+        "strengths": ["technical mastery", "powerful music", "amazing visuals"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Shadow of the Colossus",
+        "id": "tt0486673",
+        "3D": 3, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "adventure", "traversal"],
+        "strengths": ["technical mastery", "powerful music", "amazing visuals"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Okami",
+        "id": "tt0884870",
+        "3D": 3, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "adventure", "puzzles"],
+        "strengths": ["powerful music", "amazing visuals"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Assassin's Creed 2",
+        "id": "tt1201133",
+        "3D": 3, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "adventure"],
+        "strengths": ["combat", "narrative depth"],
+        "maturity": 2,
+        "realism": 1,
+        "note": "This, followed by Assassin's Creed: Brotherhood and AC: Revelations are a fantastic trio!"
+      },
+      {
+        "name": "Grim Fandango",
+        "id": "tt0177822",
+        "3D": 2, 
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["adventure", "puzzles", "mystery solving"],
+        "strengths": ["narrative depth"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Silksong",
+        "id": "tt10323784",
+        "3D": 1, 
+        "narrative level": 0,
+        "difficulty": 2,
+        "styles": ["combat", "exploration"],
+        "strengths": ["amazing visuals", "technical mastery", "powerful music"],
+        "maturity": 0,
+        "realism": 0,
+        "note": "This game is beautiful but very difficult, so be ready for a challenge!"
+      },
+      {
+        "name": "Riven",
+        "id": "tt0129342",
+        "3D": 2, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["puzzles", "exploration", "mystery solving"],
+        "strengths": ["amazing visuals", "technical mastery"],
+        "maturity": 0,
+        "realism": 1,
+        "note": "This is my favorite game of the Myst series. If you struggle with full 3D, seek out the older version with static traversal"
+      },
+      {
+        "name": "Final Fantasy 8",
+        "id": "tt0208156",
+        "3D": 2, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["tactical RPG", "romance"],
+        "strengths": ["powerful music", "cinematic"],
+        "maturity": 1,
+        "realism": 1,
+        "note": "This FF game holds a special place in my heart because it's the first one I ever played."
+      },
+      {
+        "name": "Final Fantasy 10",
+        "id": "tt0284110",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["tactical RPG", "romance"],
+        "strengths": ["powerful music", "narrative depth", "cinematic"],
+        "maturity": 1,
+        "realism": 1,
+        "note": "This FF game holds a special place in my heart because it's the first one I ever played."
+      },
+      {
+        "name": "Clair Obscur: Expedition 33",
+        "id": "tt32591698",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["tactical RPG", "combat"],
+        "strengths": ["powerful music", "narrative depth", "cinematic"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Fez",
+        "id": "tt2777584",
+        "3D": 2, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["puzzles", "platformer"],
+        "strengths": ["powerful music"],
+        "maturity": 2,
+        "realism": 0
+      },
+      {
+        "name": "Heavy Rain",
+        "id": "tt1606610",
+        "3D": 2, 
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["mystery solving"],
+        "strengths": ["narrative depth"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Code Realize: Guardian of Rebirth",
+        "id": "tt6941856",
+        "3D": 0, 
+        "narrative level": 2,
+        "difficulty": 0,
+        "styles": ["romance"],
+        "strengths": ["narrative depth"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Final Fantasy 7: Remake",
+        "id": "tt6057416",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["tactical RPG", "adventure", "combat"],
+        "strengths": ["narrative depth", "powerful music"],
+        "maturity": 1,
+        "realism": 1
+      },
+      {
+        "name": "Metal Gear Solid 4: Guns of the Patriots",
+        "id": "tt0462423",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat", "shooter", "adventure"],
+        "strengths": ["narrative depth", "cinematic"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Metal Gear Rising: Revengeance",
+        "id": "tt1602611",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat"],
+        "strengths": ["technical mastery", "cinematic"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Kingdom Hearts",
+        "id": "tt0322968",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat", "tactical RPG", "adventure"],
+        "strengths": ["narrative depth", "cinematic"],
+        "maturity": 0,
+        "realism": 1
+      },
+      {
+        "name": "Super Mario: Odyssey",
+        "id": "tt6423026",
+        "3D": 3, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "platformer"],
+        "strengths": ["technical mastery"],
+        "maturity": 0,
+        "realism": 0
+      },
+      {
+        "name": "Ori and the Blind Forest",
+        "id": "tt4550698",
+        "3D": 1, 
+        "narrative level": 0,
+        "difficulty": 1,
+        "styles": ["combat", "platformer"],
+        "strengths": ["technical mastery", "powerful music","amazing visuals"],
+        "maturity": 0,
+        "realism": 0
+      },
+      {
+        "name": "Nine Sols",
+        "id": "tt32492583",
+        "3D": 1, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat", "platformer"],
+        "strengths": ["technical mastery", "amazing visuals"],
+        "maturity": 1,
+        "realism": 0
+      },
+      {
+        "name": "Last of Us",
+        "id": "tt2140553",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat", "shooter", "adventure"],
+        "strengths": ["narrative depth", "cinematic"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Final Fantasy 16",
+        "id": "tt13103328",
+        "3D": 3, 
+        "narrative level": 1,
+        "difficulty": 1,
+        "styles": ["combat", "tactical RPG", "adventure"],
+        "strengths": ["narrative depth", "technical mastery", "cinematic"],
+        "maturity": 2,
+        "realism": 1
+      },
+      {
+        "name": "Spiritfarer",
+        "id": "tt12924108",
+        "3D": 1, 
+        "narrative level": 1,
+        "difficulty": 0,
+        "styles": ["item management", "adventure", "platformer", "exploration"],
+        "strengths": ["narrative depth", "cinematic"],
+        "maturity": 0,
+        "realism": 0
+      }
+    ]
+}

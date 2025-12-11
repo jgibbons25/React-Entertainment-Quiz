@@ -1,0 +1,24 @@
+.aboutWrapper {
+    max-width: 540px;
+    margin: 12px;
+}
+
+.aboutWrapper h2 {
+    width: 100%;
+    margin: 0px 0px 16px;
+}
+
+.aboutWrapper div {
+    width: 100%;
+}
+
+.aboutDesc {
+    display: block;
+    flex-direction: column;
+    padding: 30px 12px;
+    margin: auto 0px 10px;
+    background-color: aliceblue;
+    border-radius: 6px;
+   /* border: 2px solid#39445a93;*/
+
+}

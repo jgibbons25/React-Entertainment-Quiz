@@ -1,0 +1,112 @@
+.qboxHeader {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0px auto 26px;
+    font-weight: 600;
+    font-style: italic;
+    border: 1px solid black;
+    border-radius: 5px;
+    /*border-bottom: 4px solid#39445a93;*/
+    padding: 4px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    box-shadow: 4px 4px 2px black;
+}
+.qboxHeader span {
+    display: flex;
+    margin: auto;
+}
+
+.qboxHeader img {
+    display: flex;
+    width: 50px;
+    padding: 0px 2px;
+    margin: auto;
+}
+
+.questionBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.singleQuestion {
+    width: 95%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 5px solid grey;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-image: linear-gradient(to bottom,
+            rgb(255, 255, 255),
+            rgba(117, 117, 117, 0));
+    background-size: cover;
+    background-position: center;
+}
+
+  
+.singleQuestion h1, h2 {
+    text-align: center;
+    width: 80%;
+}
+
+.options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.singleOption {
+    width: 46%;
+    height: 50px;
+    padding: 15px 20px;
+    margin: 10px;
+    box-shadow: 0 0 2px black;
+    text-transform: capitalize;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.selected {
+    background-color: rgb(163, 144, 65);
+    color: white;
+    box-shadow: 0 0 1px black;
+}
+
+.selectedremoval {
+    text-decoration: line-through;
+    background-color: rgb(149, 149, 149);
+}
+
+.wrong {
+    background-color: rgb(233, 0, 0);
+    color: white;
+    box-shadow: 0 0 1px black;
+}
+
+.loader {
+    display: flex;
+    width: 150px;
+    margin: auto;
+    align-items: center;
+}
+
+@media (max-width: 676px) {
+    .singleOption {
+        width: 100%;
+    }
+}

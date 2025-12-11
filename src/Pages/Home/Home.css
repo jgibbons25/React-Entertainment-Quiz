@@ -1,0 +1,81 @@
+.settingsHeader {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: auto;
+}
+
+.settings{
+    flex-direction: column;
+}
+.settings div {
+    display: flex;
+    align-items: center;
+}
+
+.settings div:first-child {
+    width: 45%;
+    height: 100%;
+    padding: 0px 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    float: left;
+}
+
+.iconBanner {
+    width: 50%;
+    padding: 10px;
+    align-self: center;
+}
+.iconBanner img {
+    width: 33%;
+    max-width: 90px;
+}
+
+
+@media (max-width: 800px) {
+    .settingsHeader {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .settings div:first-child {
+        width: 100%;
+        align-items: center;
+        margin: auto;
+    }
+
+    .settings span {
+        margin: auto;
+    }
+
+    .iconBanner {
+        margin: auto;
+    }
+
+    .iconBanner img {
+        max-width: 50px;
+    }
+}
+
+/*
+.iconBanner {
+    display: flex; 
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    min-width: 300px;
+    
+}
+
+.iconBanner img {
+    display: flex;
+    width: 33%;
+}
+
+ Responsive layout - makes a two column-layout instead of four columns 
+@media screen and (min-width: 600px) {
+    .iconBanner {
+      max-width: 400px;
+    }
+  }*/
