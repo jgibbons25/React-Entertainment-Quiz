@@ -7,11 +7,10 @@ import { CircularProgress, Button } from '@mui/material';
 import ErrorMessage from '../../Components/ErrorMessage';
 import WarningMessage from '../../Components/WarningMessage';
 import Categories from '../../Data/Categories';
-//import { theme } from "../../Components/MaterialUIColors";
 
 const Quiz = ({name, category, completedQuestions, questions, setQuestions, candidates, setCandidates, setResultID, setResultMessage, setResultTitle, setResultNote }) => {
   const [ initialized, setInitialized ] = useState(false);
-  const [ emptyVar, setEmptyVar ] = useState(false); //I need to toggle this to get the buttons to re-render
+  const [ emptyVar, setEmptyVar ] = useState(false); //Toggled to force button re-render
   const [ currQues, setCurrQues ] = useState(0);
   let [ selections, setSelections ] = useState([]);
   const [ error, setError ] = useState(false);
@@ -30,7 +29,6 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
       for (let i = 0; i < candidates.length; i++) { 
         traitsData = buildTraitsData(traitsData, candidates, i);
       }
-      //console.log("initializing options");
       updateOptions(0, traitsData);
       setInitialized(true);
     }
@@ -219,14 +217,14 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
         selections = [i]
       }
     }
-    //console.log(selections.includes(i));
     setEmptyVar(!emptyVar);
     setSelections(selections);
     setError(false);
   }
 
   const buildTraitsData = (traitsData, currCandidates, i) => {
-    //traitsData is an object consisting of each movie key items such as mood, themes, etc.   The values are arrays of unique traits from all remaining candidates. This function should be used within a loop of existing candidates where i is index of current candidate
+    // traitsData is an object consisting of each movie key items such as mood, themes, etc.  
+    // The values are arrays of unique traits from all remaining candidates. This function should be used within a loop of existing candidates where i is index of current candidate
 
     let tempTraitsData = traitsData;
     for (let key in currCandidates[i]) {
@@ -238,17 +236,14 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
         if (!(key in tempTraitsData)) {
           // has key been recorded yet? if not, make an empty array:
           tempTraitsData[key] = [];
-          //console.log("initialized " + key + " key for traitsData")
         }
 
         if (Array.isArray(currCandidates[i][key])) {
-          // if the key points to an array value already, like "moods"...
+          // check if the key points to an array value already, like "moods"...
           for (const a of currCandidates[i][key]) { 
-            //console.log("adding " + a + " from array to " +  traitsData[key])
              tempTraitsData[key] = addUnique(a, tempTraitsData[key]) 
           }
         } else {
-          // console.log("adding " + candidates[i][key] + " to " + traitsData[key])
            tempTraitsData[key] = addUnique(currCandidates[i][key], tempTraitsData[key]) 
         }
       }
@@ -263,7 +258,7 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
   }
 
   const pruneCandidates = () => {
-  
+    // Major function to update candidate list after question is answered and determine next question
     completedQuestions.current = [
       ...completedQuestions.current,
       {
@@ -294,7 +289,6 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
       }
       
     }
-    //console.log("selected " + selections + " regarding " + questions[currQues].questionType);
   
 
     for (let i = 0; i < candidates.length; i++) { 
@@ -305,9 +299,8 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
         //if they opted out, this is automatically a match
         candidateMatch = true;
       } else {
-        //shorter than writing candidates[i][questions[currQues].questionType] over and over
         let currentMap = questions[currQues].questionType;        
-        //if the value of "questionType", such as "moods", is a valid key in candidates:
+        // check if the value of "questionType", such as "moods", is a valid key in candidates:
         if (currentMap in candidates[i]) {
           //loop through each selection
           for (let x = 0; x < calcSelections.length; x++) { 
@@ -344,7 +337,6 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
                 candidateMatch = true;
               }
             } else if (Number.isInteger(candidates[i][currentMap])) {
-              //console.log(candidates[i].name + " candidate map for " + questions[currQues].questionType + " is " + candidates[i][currentMap])
               if (questions[currQues].questionStyle === "maxNum") {
                 //are lesser values acceptable?
                 if (checkOptionStrings) {
@@ -352,7 +344,6 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
                     candidateMatch = true;
                   }
                 } else if (candidates[i][currentMap] <= numQuestion(calcSelections[x])) {
-                  //console.log(candidates[i][currentMap] + " less than " + selections[x] + " placement" )
                   candidateMatch = true;
                 }
               } else {
@@ -375,12 +366,10 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
         // now check if the latest item has the most points yet
         let pIndex = prunedList.length-1; // index of item just added to pruned list
         if (prunedList[pIndex].points > mostPoints[1] ) {
-          //console.log(prunedList[pIndex].name + " currently has the most points at " + prunedList[pIndex].points);
           mostPoints = [pIndex, prunedList[pIndex].points]
         } else if (prunedList[pIndex].points === mostPoints[1] ){
           //if we have found a candidate that has TIED for the most points, reset index so we know it's unusable
           mostPoints = [-1, mostPoints[1]]
-          //console.log(prunedList[pIndex].name + " ties the points again");
         }
 
         traitsData = buildTraitsData(traitsData, candidates, i);
@@ -388,16 +377,12 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
       } // else { //console.log(candidates[i].name + " is not a match");   }
     
       setCandidates(prunedList); //candidate's updated variable will NOT be available til next frame
-      //console.log("printing Traits Data...");
-      //console.log(traitsData);
-    } //end looping through candidates
 
-    //console.log("Pruned list length is " + prunedList.length);
+    } //end looping through candidates
 
     if (mostPoints[1] > 0 && mostPoints[0] > -1 ){
       //we have a winner for the most points!
       prunedList = [prunedList[mostPoints[0]]];
-      //console.log("Winner of most points is " + prunedList[0].name);
     }
 
     if (prunedList.length > 1) {
@@ -405,14 +390,13 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
       
       for (let i = currQues+1; i < questions.length; i++) { 
         //advance through questions from current question
-       // console.log("checking question " + (currQues+1));
         
        // make sure this question hasn't already been asked (somehow)
        if ( completedQuestions.current.filter((quest) => quest.id === i).length === 0 ) {
           //check if the questionType key is in traitsData
           if (questions[i].questionType in traitsData ) {
-            //console.log("checking traits data: " + key + " = " + value)
-            if (traitsData[questions[i].questionType].length > 1) { //are there at least two different types?
+            //are there at least two different types?
+            if (traitsData[questions[i].questionType].length > 1) { 
               nextQuestion = i;
             }
           }
@@ -452,7 +436,6 @@ const Quiz = ({name, category, completedQuestions, questions, setQuestions, cand
 
     //We found our match!
     if (prunedList.length === 1) {
-      //console.log("We narrowed it down to 1!")
       if (prunedList[0].note) {
         setResultNote(prunedList[0].note)
       } else {
