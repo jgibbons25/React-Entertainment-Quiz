@@ -770,8 +770,8 @@
         "animated": false,
         "heaviness": 1,
         "moods": ["dramatic","adventurous"],
-        "themes": ["emotional drama", "religious drama"],
-        "triggers": ["animal death"],
+        "themes": ["emotional drama"],
+        "triggers": [],
         "realism": 3,
         "strengths": ["amazing visuals", "powerful music", "narrative depth"],
         "musical": false,
@@ -808,4 +808,5 @@
       }
       
     ]
+
   } 
